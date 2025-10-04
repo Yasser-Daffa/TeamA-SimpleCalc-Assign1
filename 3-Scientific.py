@@ -159,6 +159,35 @@ def tanhfunction(Value, DEG_RAD, user2):
     print("Result:", result)
     return
 
+def log_function(Value, DEG_RAD, user2):
+     if Value <= 0:
+        print("the number must be > 0 try again")
+        Value1(Value,DEG_RAD,user2)
+        return
+     else:
+        Value= math.log10(Value)
+        print("result: ",Value)
+        
+def ln_function(Value, DEG_RAD, user2):
+     if Value <= 0:
+        print("the number must be > 0 try again")
+        Value1(Value,DEG_RAD,user2)
+        return
+     else:
+        Value= math.log(Value)
+        print("result: ",Value)
+
+def i_function(Value, DEG_RAD, user2):
+     if Value < 0 or not float(Value).is_integer():
+        print("the number must be > 0 and  not float try again")
+        Value1(Value,DEG_RAD,user2)
+        return
+     else:
+        Value= math.factorial(Value)
+        print("result: ",Value)
+    
+    
+
 
 
 def calculations(Value,DEG_RAD,user2):
@@ -194,6 +223,15 @@ def calculations(Value,DEG_RAD,user2):
             
           elif  user2 == "tanh" or user2=="coth":
               tanhfunction(Value,DEG_RAD,user2)
+              
+          elif  user2 == "log10":
+              log_function(Value)
+        
+          elif user2== "ln":
+              ln_function(Value)
+                  
+          elif user2 == "factorial":
+              i_function(Value, DEG_RAD, user2)
          
         
           else:
@@ -211,15 +249,16 @@ def calculations(Value,DEG_RAD,user2):
 def scientific_mode():
       Value=0
       DEG_RAD=0
-      print("sin,cos,tan,csc,sec,cot,\n" 
-      "arcsin,arccos,arctan,arccsc,arcsec,arccot\n"
-      "sinh,cosh,tanh,csch,sech,coth\nstop")
+      print("Trigonometric functions:\nsin,cos,tan,csc,sec,cot,\n" 
+      "Inverse trigonometric functions:\narcsin,arccos,arctan,arccsc,arcsec,arccot\n"
+      "Hyperbolic functions\nsinh,cosh,tanh,csch,sech,coth\n"
+      "other functions:\nlog10,ln,factorial\nstop")
       user2 = input("Enter the function or stop if you wand end: ").lower()
       while True:
           if (user2=="sin"or user2=="cos" or user2=="tan" or user2=="csc" or user2=="sec"or user2=="cot"
           or user2=="arcsin" or user2=="arccos" or user2=="arctan" or user2 == "arccsc" or user2 =="arcsec"
           or user2=="arccot" or user2=="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" 
-          or user2== "sech" or user2=="coth"):
+          or user2== "sech" or user2=="coth" or user2=="log10" or user2=="ln"or user2=="factorial"):
               DEG_RAD1(Value,DEG_RAD,user2)
               break
           else:
@@ -230,22 +269,28 @@ def scientific_mode():
       
       
 def DEG_RAD1(Value,DEG_RAD,user2):
-      DEG_RAD=input("degrees or radians or stop if you wand end or back:: ").lower()
-      while True:
-          if DEG_RAD == "degrees" or DEG_RAD=="radians" or DEG_RAD=="stop" or DEG_RAD=="back":
+    if user2=="log10" or user2=="ln"or user2=="factorial":
+        Value1(Value,DEG_RAD,user2)
+        return
+    else:
+        
+        DEG_RAD=input("degrees or radians or stop if you wand end or back:: ").lower()
+        while True:
+            if DEG_RAD == "degrees" or DEG_RAD=="radians" or DEG_RAD=="stop" or DEG_RAD=="back":
 
-             break
-          else:
-              DEG_RAD=input("invild please choce degrees or radians: or stop or back: ").lower()
-      if DEG_RAD=="stop":
-          exit()
+               break
+            else:
+                DEG_RAD=input("invild please choce degrees or radians: or stop or back: ").lower()
+    if DEG_RAD=="stop":
+        exit()
           
-      elif DEG_RAD=="back":
-          scientific_mode()
-          return
-      else:
-          Value1(Value,DEG_RAD,user2)
-      return
+    elif DEG_RAD=="back":
+        scientific_mode()
+        return
+    else:
+        Value1(Value,DEG_RAD,user2)
+    return
+
 def Value1(Value,DEG_RAD,user2):
 
     while True:
