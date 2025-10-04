@@ -157,9 +157,10 @@ def calculations(Value,DEG_RAD,user2):
 
 def scientific_menu():
     while True:
-      print("sin\ncos\ntan\ncsc\nsec\ncot\narcsin\narccos\narctan\narccsc\narcsec\narccot\n
-      sinh\ncosh\ntanh\ncsch\nsech\ncoth\nstop\n")    
-      user2 = input("Enter the function: ").lower()
+      print("sin,cos,tan,csc,sec,cot,\n" 
+      "arcsin,arccos,arctan,arccsc,arcsec,arccot\n"
+      "sinh,cosh,tanh,csch,sech,coth\nstop")
+      user2 = input("Enter the function or stop if you wand end: ").lower()
       while True:
           if (user2=="sin"or user2=="cos" or user2=="tan" or user2=="csc" or user2=="sec"or user2=="cot"
           or user2=="arcsin" or user2=="arccos" or user2=="arctan" or user2 == "arccsc" or user2 =="arcsec"
@@ -167,27 +168,32 @@ def scientific_menu():
           or user2== "sech" or user2=="coth" or user2=="stop"):
               break
           else:
-              user2=input("invild name pleas Enter the function: ").lower()
+              user2=input("invild name pleas Enter the function or stop if you wand end:: ").lower()
       if user2=="stop":
           break
       
       
 
-      DEG_RAD=input("degrees or radians: ").lower()
+      DEG_RAD=input("degrees or radians or stop if you wand end:: ").lower()
       while True:
-          if DEG_RAD == "degrees" or DEG_RAD=="radians":
+          if DEG_RAD == "degrees" or DEG_RAD=="radians" or DEG_RAD=="stop":
+
              break
           else:
-              DEG_RAD=input("invild please choce degrees or radians: ").lower()
-    
+              DEG_RAD=input("invild please choce degrees or radians: or stop if you wand end: ").lower()
+      if DEG_RAD=="stop":
+          break
       while True:
-           Value = input("Enter value: ")
+           Value = input("Enter value or stop if you wand end: ")
+           if Value == "stop":
+               break
            try:
                Value = float(Value)
                break
            except:
                print("invalid number, please enter again")
-
+      if Value=="stop":
+          break
 
       calculations(Value,DEG_RAD,user2)          
     return  
@@ -199,4 +205,3 @@ scientific_menu()
        
      
     
-
