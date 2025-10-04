@@ -4,7 +4,7 @@ def sinfunction(Value, DEG_RAD, user2):
         if DEG_RAD == "degrees":
             Value = math.radians(Value)
         if Value == 0:
-            print("Value cannot 0 for csc")
+            print("Value cannot be 0 for csc")
             Value1(Value, DEG_RAD, user2)
             return
         sin_csc = 1 / math.sin(Value)
@@ -19,7 +19,7 @@ def cosfunction(Value, DEG_RAD, user2):
     if user2 == "sec":
         Value0 = Value if DEG_RAD == "degrees" else math.degrees(Value)
         if Value0 % 180 == 90:
-            print("Value not vild for sec")
+            print("Value not valid for sec (cos=0)")
             Value1(Value, DEG_RAD, user2)
             return
         if DEG_RAD == "degrees":
@@ -36,7 +36,7 @@ def tanfunction(Value, DEG_RAD, user2):
     if user2 == "cot":
         Value0 = Value if DEG_RAD == "degrees" else math.degrees(Value)
         if Value0 % 180 == 0 :
-            print("Value not vild for cot")
+            print("Value not valid for cot (tan=0)")
             Value1(Value, DEG_RAD, user2)
             return
         if DEG_RAD == "degrees":
