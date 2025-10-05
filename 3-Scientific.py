@@ -126,16 +126,14 @@ def arctanfunction(Value, DEG_RAD, user2):
 
 def sinhfunction(Value, DEG_RAD, user2):
     if user2 == "csch":
-        if DEG_RAD == "degrees":
-            Value = math.radians(Value)
+        
         if Value == 0:
             print("Value cannot be 0 for csch")
             Value1(Value, DEG_RAD, user2)
             return
         result = 1 / math.sinh(Value)
     else:
-        if DEG_RAD == "degrees":
-            Value = math.radians(Value)
+       
         result = math.sinh(Value)
 
     print("Result:", result)
@@ -144,12 +142,10 @@ def sinhfunction(Value, DEG_RAD, user2):
 
 def coshfunction(Value, DEG_RAD, user2):
     if user2 == "sech":
-        if DEG_RAD == "degrees":
-            Value = math.radians(Value)
+        
         result = 1 / math.cosh(Value)
     else:
-        if DEG_RAD == "degrees":
-            Value = math.radians(Value)
+       
         result = math.cosh(Value)
 
     print("Result:", result)
@@ -158,16 +154,14 @@ def coshfunction(Value, DEG_RAD, user2):
 
 def tanhfunction(Value, DEG_RAD, user2):
     if user2 == "coth":
-        if DEG_RAD == "degrees":
-            Value = math.radians(Value)
+        
         if Value == 0:
             print("Value cannot be 0 for coth")
             Value1(Value, DEG_RAD, user2)
             return
         result = 1 / math.tanh(Value)
     else:
-        if DEG_RAD == "degrees":
-            Value = math.radians(Value)
+       
         result = math.tanh(Value)
 
     print("Result:", round(result,2))
@@ -211,7 +205,13 @@ def exp_function(Value, DEG_RAD, user2):
     print("result: ",round(math.exp(Value),2))
     
     
+def e_pi_function(user2):
+    if user2 =="e":
+        print("result: ",round(math.e,2))
+    elif user2=="pi":
+        print("result", round(math.pi,2))
     
+
 
 
 
@@ -262,6 +262,8 @@ def calculations(Value,DEG_RAD,user2):
               
           elif user2=="exp":
               exp_function(Value, DEG_RAD, user2)
+          elif user2=="e" or user2=="pi":
+              e_pi_function(user2)
               
          
         
@@ -283,29 +285,35 @@ def scientific_mode():
       print("Trigonometric functions:\nsin,cos,tan,csc,sec,cot,\n" 
       "Inverse trigonometric functions:\narcsin,arccos,arctan,arccsc,arcsec,arccot\n"
       "Hyperbolic functions\nsinh,cosh,tanh,csch,sech,coth\n"
-      "other functions:\nlog10,ln,factorial,exp\nstop")
-      user2 = input("Enter the function or stop if you wand end: ").lower()
+      "other functions:\nlog10,ln,factorial,exp,e,pi\nstop")
+      user2 = input("Enter the function or stop if you want end: ").lower()
       while True:
           if (user2=="sin"or user2=="cos" or user2=="tan" or user2=="csc" or user2=="sec"or user2=="cot"
           or user2=="arcsin" or user2=="arccos" or user2=="arctan" or user2 == "arccsc" or user2 =="arcsec"
           or user2=="arccot" or user2=="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" 
-          or user2== "sech" or user2=="coth" or user2=="log10" or user2=="ln"or user2=="factorial" or user2=="exp"):
+          or user2== "sech" or user2=="coth" or user2=="log10" or user2=="ln"or user2=="factorial" 
+          or user2=="exp"):
               DEG_RAD1(Value,DEG_RAD,user2)
               break
+          elif user2=="e" or user2=="pi":
+              calculations(Value,DEG_RAD,user2)
+              break
+          elif user2=="stop":
+              exit()
           else:
-              user2=input("invild name pleas Enter the function or stop if you wand end:: ").lower()
-      if user2=="stop":
-          exit()
-      return  
+              user2=input("invild name pleas Enter the function or stop: ").lower()
+      
+          
+      return
       
       
 def DEG_RAD1(Value,DEG_RAD,user2):
-    if user2=="log10" or user2=="ln"or user2=="factorial" or user2=="exp":
+    if user2=="log10" or user2=="ln"or user2=="factorial" or user2=="exp" or user2 =="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" or user2=="sech" or user2=="coth":
         Value1(Value,DEG_RAD,user2)
         return
     else:
         
-        DEG_RAD=input("degrees or radians or stop if you wand end or back:: ").lower()
+        DEG_RAD=input("degrees or radians or stop or back:: ").lower()
         while True:
             if DEG_RAD == "degrees" or DEG_RAD=="radians" or DEG_RAD=="stop" or DEG_RAD=="back":
 
@@ -325,10 +333,14 @@ def DEG_RAD1(Value,DEG_RAD,user2):
 def Value1(Value,DEG_RAD,user2):
 
     while True:
-        Value = input("Enter value or 'stop' to end or back: ").lower()
+        Value = input("Enter value or stop or back: ").lower()
 
         if Value == "stop":
             exit()
+            
+        elif Value=="back" and (user2=="log10" or user2=="ln"or user2=="factorial" or user2=="exp" or user2 =="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" or user2=="sech" or user2=="coth"):
+            scientific_mode() 
+            return
         elif Value == "back":
             DEG_RAD1(Value, DEG_RAD, user2)
             return
@@ -345,8 +357,3 @@ def Value1(Value,DEG_RAD,user2):
 scientific_mode()        
     
         
-    
-
-       
-     
-    
