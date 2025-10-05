@@ -1,12 +1,14 @@
 import math
 def sinfunction(Value, DEG_RAD, user2):
     if user2 == "csc":
-        if DEG_RAD == "degrees":
-            Value = math.radians(Value)
-        if Value == 0:
+        Value0 = Value if DEG_RAD == "degrees" else math.degrees(Value)
+        if Value0 % 180 == 0:
             print("Value cannot be 0 for csc")
             Value1(Value, DEG_RAD, user2)
             return
+        if DEG_RAD == "degrees":
+            Value = math.radians(Value)
+        
         sin_csc = 1 / math.sin(Value)
     else:
         if DEG_RAD == "degrees":
