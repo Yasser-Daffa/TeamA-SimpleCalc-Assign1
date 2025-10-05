@@ -252,10 +252,10 @@ def calculations(Value,DEG_RAD,user2):
               tanhfunction(Value,DEG_RAD,user2)
               
           elif  user2 == "log10":
-              log_function(Value)
+              log_function(Value,DEG_RAD,user2)
         
           elif user2== "ln":
-              ln_function(Value)
+              ln_function(Value,DEG_RAD,user2)
                   
           elif user2 == "factorial":
               i_function(Value, DEG_RAD, user2)
