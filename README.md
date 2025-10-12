@@ -63,10 +63,11 @@ By:
    3- user enters a single input when two or more were supposed to be entered (separated by a comma)
    4- user enters multiple inputs when a single input was requested
    5- user enters a float when an integer was requested
+   6- if the user tries to enter a unit that doesn't exist in the unit table.
 
   *Difficulty faced during the writing of this code:
-   -I had massive issues when trying to formulate a proper formatted print function.
-   -The schedule/user interface for the function took the most time. When I initially thought it would be the fastest to go through.
+   - I had massive issues when trying to formulate a proper formatted print function.
+   - The schedule/user interface for the function took the most time. When I initially thought it would be the fastest to go through.
 
 
 
