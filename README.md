@@ -65,7 +65,7 @@ By:
    5- user enters a float when an integer was requested
    6- if the user tries to enter a unit that doesn't exist in the unit table.
 
-  *Difficulty faced during the writing of this code:
+ *Difficulty faced during the writing of this code:
    - I had massive issues when trying to formulate a proper formatted print function.
    - The schedule/user interface for the function took the most time. When I initially thought it would be the fastest to go through.
 
