@@ -12,7 +12,7 @@ Developed as a small group project by **Team A**.
 ### Error Handling
 1.  Used try-except to handle invalid numeric inputs.
 2.  Checked for division by zero before dividing.
-3.  isplayed custom error messages instead of crashing the program.
+3.  displayed custom error messages instead of crashing the program.
 4.  Used loops to re-ask the user for correct input after an error.
 5. Handled unexpected operation names with a validation check 
 
