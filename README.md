@@ -72,7 +72,7 @@ The program returns an error message when:
 
 ---
 
-## Team Members
+## Team A Members
 | Name | Role |
 |------|------|
 | Yehya | Standard Mode |
@@ -80,6 +80,6 @@ The program returns an error message when:
 | Mohanned | Programmer Mode |
 | Ahmed | Programmer Mode |
 | Salim | Scientific Mode |
-| Yasser | Converter Mode & Integration |
+| Yasser | Converter Mode & Code integration |
 
 ---
