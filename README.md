@@ -10,15 +10,15 @@ Developed as a small group project by **Team A**.
 **By:** Yehya & Mohammed Ali  
 
 ### Error Handling
-1.  
-2.  
-3.  
-4.  
-5.  
+1.  Used try-except to handle invalid numeric inputs.
+2.  Checked for division by zero before dividing.
+3.  isplayed custom error messages instead of crashing the program.
+4.  Used loops to re-ask the user for correct input after an error.
+5. Handled unexpected operation names with a validation check 
 
 ### Difficulties Faced
--  
--  
+-  Understanding how to use try-except correctly at first.
+-  Making sure indentation was correct to avoid syntax errors.
 
 ---
 
