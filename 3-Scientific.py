@@ -284,10 +284,20 @@ def calculations(Value,DEG_RAD,user2):
 def scientific_mode():
       Value=0
       DEG_RAD=0
-      print("Trigonometric functions:\nsin,cos,tan,csc,sec,cot,\n" 
-      "Inverse trigonometric functions:\narcsin,arccos,arctan,arccsc,arcsec,arccot\n"
-      "Hyperbolic functions\nsinh,cosh,tanh,csch,sech,coth\n"
-      "other functions:\nlog10,ln,factorial,exp,e,pi\nstop")
+      
+      print("--Welcome to scientific_mode--\n"
+      "--Here there are specific functions that perform only a specific task--\n"
+      "-----------------------------------------------------------------------\n"
+      "1- Trigonometric functions:\n"
+      "      sin,cos,tan,csc,sec,cot\n"
+      "2- Inverse trigonometric functions:\n"
+      "      arcsin,arccos,arctan,arccsc,arcsec,arccot\n"
+      "3- Hyperbolic functions\n"
+      "      sinh,cosh,tanh,csch,sech,coth\n"
+      "4- logarthmic functions\n"
+      "      log10,ln\n"
+      "5- other functions:\n"
+      "      factorial,exp,e,pi\n""stop")
       user2 = input("Enter the function or stop if you want end: ").lower()
       while True:
           if (user2=="sin"or user2=="cos" or user2=="tan" or user2=="csc" or user2=="sec"or user2=="cot"
