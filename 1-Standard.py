@@ -143,3 +143,51 @@ def print_welcome_message(info_message,category_name):
 
 colors = colors_function()
 
+
+def multi_expression_function():
+    print_welcome_message("Calculates Expression entered for real numbers","Multi Expression")
+    while True:
+    
+        user_input = valid_input_function(f"{colors['blue']}Enter expression{colors['blue']}"
+                                          f" ({colors['yellow']}'back'{colors['blue']} to return): {colors['reset']}", allow_float=True)
+
+        if user_input == "exit":
+            print(colors["bright_yellow"]+colors["bold"]+"**Exiting Multi-Expressions mode**" + colors['reset'])
+            break
+
+        print(f"{colors['bright_green']}\nanswer is {colors['yellow']}{user_input}{colors['reset']}\n")
+
+
+def roots_function():
+    from math import pow
+    
+    print_welcome_message("Calculates roots for real numbers","Roots")
+    
+    while True:
+        
+        user_roots = valid_input_function(f"{colors['blue']}Enter {colors['magenta']}n-th{colors['blue']} of the root"
+                                          f" ({colors['yellow']}'back'{colors['blue']} to return): {colors['reset']}", allow_float=True)
+        print()
+
+        if user_roots == "exit":
+            print(colors["bright_yellow"]+colors["bold"]+"**Exiting Multi-Expressions mode**" + colors['reset'])
+            break
+        
+        if user_roots < 1:
+            print(f"{colors['bright_red']}Error: The root must be integer and equal or greater than one.{colors['reset']}")
+            continue
+
+        user_value = valid_input_function(f"{colors['blue']}Enter value under the root: {colors['reset']}", True)
+        user_value = int(user_value)
+        
+        if user_value <= 0:
+            print(f"{colors['bright_red']}Error: Roots do not accept negative numbers." \
+            f" Please, enter a positive number.{colors['reset']}")
+            continue
+        
+        result = pow(user_value, (1/user_roots))
+        print(f"{colors['bright_green']}The result of root "
+              f"{colors['bright_yellow']}{user_roots}{colors['bright_green']} for {colors['bright_yellow']}{user_value}"
+              f"{colors['bright_green']} = {colors['bright_yellow']}{result}{colors['reset']}")
+
+
