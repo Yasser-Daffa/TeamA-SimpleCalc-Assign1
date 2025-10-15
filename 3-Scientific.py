@@ -15,6 +15,7 @@ def sinfunction(Value, DEG_RAD, user2):
             Value = math.radians(Value)
         sin_csc = math.sin(Value)
     print("Result:", round(sin_csc,2))
+    Value1(Value,DEG_RAD,user2)
     return
 
 def cosfunction(Value, DEG_RAD, user2):
@@ -32,6 +33,7 @@ def cosfunction(Value, DEG_RAD, user2):
             Value = math.radians(Value)
         cos_sec = math.cos(Value)
     print("Result:", round(cos_sec,2))
+    Value1(Value,DEG_RAD,user2)
     return
 
 def tanfunction(Value, DEG_RAD, user2):
@@ -49,6 +51,7 @@ def tanfunction(Value, DEG_RAD, user2):
             Value = math.radians(Value)
         tan_cot = math.tan(Value)
     print("Result:", round(tan_cot,2))
+    Value1(Value,DEG_RAD,user2)
     return
 
 
@@ -78,6 +81,7 @@ def arcsinfunction(Value, DEG_RAD, user2):
     if DEG_RAD == "degrees":
         result = math.degrees(result)
     print("Result:", round(result,2))
+    Value1(Value,DEG_RAD,user2)
     return
 
 
@@ -99,6 +103,7 @@ def arccosfunction(Value, DEG_RAD, user2):
     if DEG_RAD == "degrees":
         result = math.degrees(result)
     print("Result:", round(result,2))
+    Value1(Value,DEG_RAD,user2)
     return
 
 
@@ -115,6 +120,7 @@ def arctanfunction(Value, DEG_RAD, user2):
     if DEG_RAD == "degrees":
         result = math.degrees(result)
     print("Result:", round(result,2))
+    Value1(Value,DEG_RAD,user2)
     return
 
 
@@ -139,6 +145,7 @@ def sinhfunction(Value, DEG_RAD, user2):
         result = math.sinh(Value)
 
     print("Result:", result)
+    Value1(Value,DEG_RAD,user2)
     return
 
 
@@ -151,6 +158,7 @@ def coshfunction(Value, DEG_RAD, user2):
         result = math.cosh(Value)
 
     print("Result:", result)
+    Value1(Value,DEG_RAD,user2)
     return
 
 
@@ -167,7 +175,7 @@ def tanhfunction(Value, DEG_RAD, user2):
         result = math.tanh(Value)
 
     print("Result:", round(result,2))
-    
+    Value1(Value,DEG_RAD,user2)
 
 
 
@@ -184,6 +192,7 @@ def log_function(Value, DEG_RAD, user2):
      else:
         Value= math.log10(Value)
         print("result: ",round(Value,2))
+        Value1(Value,DEG_RAD,user2)
         
 def ln_function(Value, DEG_RAD, user2):
      if Value <= 0:
@@ -193,6 +202,7 @@ def ln_function(Value, DEG_RAD, user2):
      else:
         Value= math.log(Value)
         print("result: ",round(Value,2))
+        Value1(Value,DEG_RAD,user2)
 
 def i_function(Value, DEG_RAD, user2):
      if Value < 0 or not float(Value).is_integer():
@@ -202,16 +212,20 @@ def i_function(Value, DEG_RAD, user2):
      else:
         Value= math.factorial(Value)
         print("result: ",round(Value,2))
+        Value1(Value,DEG_RAD,user2)
         
 def exp_function(Value, DEG_RAD, user2):
     print("result: ",round(math.exp(Value),2))
+    Value1(Value,DEG_RAD,user2)
     
     
 def e_pi_function(user2):
     if user2 =="e":
         print("result: ",round(math.e,2))
+        Value1(Value,DEG_RAD,user2)
     elif user2=="pi":
         print("result", round(math.pi,2))
+        Value1(Value,DEG_RAD,user2)
     
 
 
