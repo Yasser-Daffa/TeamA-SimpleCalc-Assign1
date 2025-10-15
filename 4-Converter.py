@@ -390,7 +390,11 @@ def temperature_menu_function():
                 result = temperature_logic(user_value, from_unit_name, to_unit_name)
 
                 if result is not False:
-                    print(f"{user_value} {from_unit_name} → {result} {to_unit_name}".title())
+                    print(
+                    f"{colors['bright_green']}{user_value} {from_unit_name.title()} "
+                    f"{colors['bold']}{colors['bright_yellow']}→{colors['reset']} "
+                    f"{colors['bright_green']}{result} {to_unit_name.title()}{colors['reset']}"
+                    )
 
 
             except ValueError:
@@ -610,3 +614,5 @@ def converter():
 
         selected_function = converter_dict[converter_list[user_choice - 1]]
         selected_function()
+
+converter()
