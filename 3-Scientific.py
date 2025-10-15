@@ -167,7 +167,7 @@ def tanhfunction(Value, DEG_RAD, user2):
         result = math.tanh(Value)
 
     print("Result:", round(result,2))
-    return
+    
 
 
 
@@ -293,7 +293,7 @@ def scientific_mode():
       "3- Hyperbolic functions\n"
       "4- logarthmic functions\n"
       "5- other functions:\n")
-      user2 = input("Enter the number of function or stop if you want end: ").lower()
+      user2 = input("Enter the number of function or stop if you want end: ")
       while True:
           if user2=="1":
               trifunction(Value,DEG_RAD,user2)
@@ -309,14 +309,14 @@ def scientific_mode():
           elif user2=="stop":
               exit()
           else:
-              user2=input("invild name pleas Enter the function or stop: ").lower()
+              user2=input("invild name pleas Enter the function or stop: ")
       
 def trifunction(Value,DEG_RAD,user2):
     print("--Welcome to Trigonometric functions--\n"
       "--Functions that use angles to find relationships between the sides of a triangle--\n"
       "-----------------------------------------------------------------------\n"
       "1- sin  2- cos  3- tan  4- csc  5- sec  6- cot")
-    user2= input("please enter the number of function or stop or back: ").lower()
+    user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
             user2="sin"
@@ -341,14 +341,14 @@ def trifunction(Value,DEG_RAD,user2):
         elif user2=="stop":
             exit()
         else:
-            user2=input("The entry is invalid please try again: ").lower()
+            user2=input("The entry is invalid please try again: ")
         
 def arcfunction(Value,DEG_RAD,user2):
     print("--Welcome to Inverse trigonometric functions--\n"
       "--These give you the angle when you already know the trigonometric value--\n"
       "-----------------------------------------------------------------------\n"
       "1- arcsin  2- arccos  3- arctan  4- arccsc  5- arcsec  6- arccot")
-    user2= input("please enter the number of function or stop or back: ").lower()
+    user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
             user2="arcsin"
@@ -373,14 +373,14 @@ def arcfunction(Value,DEG_RAD,user2):
         elif user2=="stop":
             exit()
         else:
-            user2=input("The entry is invalid please try again: ").lower()
+            user2=input("The entry is invalid please try again: ")
             
 def hypfunction(Value,DEG_RAD,user2):
     print("--Welcome to Hyperbolic functions--\n"
       "--Similar to trigonometric functions but based on exponential equations--\n"
       "-----------------------------------------------------------------------\n"
       "1- sinh  2- cosh  3- tanh  4- csch  5- sech  6- coth")
-    user2= input("please enter the number of function or stop or back: ").lower()
+    user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
             user2="sinh"
@@ -405,7 +405,7 @@ def hypfunction(Value,DEG_RAD,user2):
         elif user2=="stop":
             exit()
         else:
-            user2=input("The entry is invalid please try again: ").lower()
+            user2=input("The entry is invalid please try again: ")
             
             
 def logfunction(Value,DEG_RAD,user2):
@@ -413,7 +413,7 @@ def logfunction(Value,DEG_RAD,user2):
       "--Used to find the power or exponent of a number--\n"
       "-----------------------------------------------------------------------\n"
       "1- log10  2- ln")
-    user2= input("please enter the number of function or stop or back: ").lower()
+    user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
             user2="log10"
@@ -426,7 +426,7 @@ def logfunction(Value,DEG_RAD,user2):
         elif user2=="stop":
             exit()
         else:
-            user2=input("The entry is invalid please try again: ").lower()
+            user2=input("The entry is invalid please try again: ")
             
             
 def otherfunction(Value,DEG_RAD,user2):
@@ -434,7 +434,7 @@ def otherfunction(Value,DEG_RAD,user2):
       "--Basic math functions like square root, absolute value, exponent, factorial, e, and π--\n"
       "-----------------------------------------------------------------------\n"
       "1- factorial  2- exp  3- e   4- pi")
-    user2= input("please enter the number of function or stop or back: ").lower()
+    user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
             user2="factorial"
@@ -453,7 +453,7 @@ def otherfunction(Value,DEG_RAD,user2):
         elif user2=="stop":
             exit()
         else:
-            user2=input("The entry is invalid please try again: ").lower()
+            user2=input("The entry is invalid please try again: ")
             
             
 def DEG_RAD1(Value,DEG_RAD,user2):
@@ -484,10 +484,11 @@ def DEG_RAD1(Value,DEG_RAD,user2):
 def Value1(Value,DEG_RAD,user2):
 
     while True:
-        Value = input("Enter value or stop or back: ").lower()
+        Value = input("Enter value or stop or back: ")
 
         if Value == "stop":
             exit()
+    
             
         elif Value=="back" and (user2 =="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" or user2=="sech" or user2=="coth"):
             hypfunction(Value,DEG_RAD,user2)
@@ -497,12 +498,12 @@ def Value1(Value,DEG_RAD,user2):
             otherfunction(Value,DEG_RAD,user2)
         elif Value == "back":
             DEG_RAD1(Value, DEG_RAD, user2)
-            return
         else:
             try:
                 Value = float(Value)
                 calculations(Value, DEG_RAD, user2)
-                return
+                exit()
+            
             except ValueError:
                 print("Invalid number please enter again")
 
