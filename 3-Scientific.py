@@ -222,10 +222,10 @@ def exp_function(Value, DEG_RAD, user2):
 def e_pi_function(user2):
     if user2 =="e":
         print("result: ",round(math.e,2))
-        Value1(Value,DEG_RAD,user2)
+        
     elif user2=="pi":
         print("result", round(math.pi,2))
-        Value1(Value,DEG_RAD,user2)
+        
     
 
 
