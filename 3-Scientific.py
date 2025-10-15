@@ -289,36 +289,173 @@ def scientific_mode():
       "--Here there are specific functions that perform only a specific task--\n"
       "-----------------------------------------------------------------------\n"
       "1- Trigonometric functions:\n"
-      "      sin,cos,tan,csc,sec,cot\n"
       "2- Inverse trigonometric functions:\n"
-      "      arcsin,arccos,arctan,arccsc,arcsec,arccot\n"
       "3- Hyperbolic functions\n"
-      "      sinh,cosh,tanh,csch,sech,coth\n"
       "4- logarthmic functions\n"
-      "      log10,ln\n"
-      "5- other functions:\n"
-      "      factorial,exp,e,pi\n""stop")
-      user2 = input("Enter the function or stop if you want end: ").lower()
+      "5- other functions:\n")
+      user2 = input("Enter the number of function or stop if you want end: ").lower()
       while True:
-          if (user2=="sin"or user2=="cos" or user2=="tan" or user2=="csc" or user2=="sec"or user2=="cot"
-          or user2=="arcsin" or user2=="arccos" or user2=="arctan" or user2 == "arccsc" or user2 =="arcsec"
-          or user2=="arccot" or user2=="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" 
-          or user2== "sech" or user2=="coth" or user2=="log10" or user2=="ln"or user2=="factorial" 
-          or user2=="exp"):
-              DEG_RAD1(Value,DEG_RAD,user2)
+          if user2=="1":
+              trifunction(Value,DEG_RAD,user2)
               break
-          elif user2=="e" or user2=="pi":
-              calculations(Value,DEG_RAD,user2)
-              break
+          elif user2=="2":
+              arcfunction(Value,DEG_RAD,user2)
+          elif user2=="3":
+              hypfunction(Value,DEG_RAD,user2)
+          elif user2=="4":
+              logfunction(Value,DEG_RAD,user2)
+          elif user2=="5":
+              otherfunction(Value,DEG_RAD,user2)
           elif user2=="stop":
               exit()
           else:
               user2=input("invild name pleas Enter the function or stop: ").lower()
       
-          
-      return
-      
-      
+def trifunction(Value,DEG_RAD,user2):
+    print("--Welcome to Trigonometric functions--\n"
+      "--Functions that use angles to find relationships between the sides of a triangle--\n"
+      "-----------------------------------------------------------------------\n"
+      "1- sin  2- cos  3- tan  4- csc  5- sec  6- cot")
+    user2= input("please enter the number of function or stop or back: ").lower()
+    while True:
+        if user2=="1":
+            user2="sin"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="2":
+            user2="cos"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="3":
+            user2="tan"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="4":
+            user2="csc"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="5":
+            user2="sec"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="6":
+            user2="cot"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="back":
+            scientific_mode()
+        elif user2=="stop":
+            exit()
+        else:
+            user2=input("The entry is invalid please try again: ").lower()
+        
+def arcfunction(Value,DEG_RAD,user2):
+    print("--Welcome to Inverse trigonometric functions--\n"
+      "--These give you the angle when you already know the trigonometric value--\n"
+      "-----------------------------------------------------------------------\n"
+      "1- arcsin  2- arccos  3- arctan  4- arccsc  5- arcsec  6- arccot")
+    user2= input("please enter the number of function or stop or back: ").lower()
+    while True:
+        if user2=="1":
+            user2="arcsin"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="2":
+            user2="arccos"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="3":
+            user2="arctan"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="4":
+            user2="arccsc"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="5":
+            user2="arcsec"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="6":
+            user2="arccot"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="back":
+            scientific_mode()
+        elif user2=="stop":
+            exit()
+        else:
+            user2=input("The entry is invalid please try again: ").lower()
+            
+def hypfunction(Value,DEG_RAD,user2):
+    print("--Welcome to Hyperbolic functions--\n"
+      "--Similar to trigonometric functions but based on exponential equations--\n"
+      "-----------------------------------------------------------------------\n"
+      "1- sinh  2- cosh  3- tanh  4- csch  5- sech  6- coth")
+    user2= input("please enter the number of function or stop or back: ").lower()
+    while True:
+        if user2=="1":
+            user2="sinh"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="2":
+            user2="cosh"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="3":
+            user2="tanh"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="4":
+            user2="csch"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="5":
+            user2="sech"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="6":
+            user2="coth"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="back":
+            scientific_mode()
+        elif user2=="stop":
+            exit()
+        else:
+            user2=input("The entry is invalid please try again: ").lower()
+            
+            
+def logfunction(Value,DEG_RAD,user2):
+    print("--Welcome to logarthmic functions--\n"
+      "--Used to find the power or exponent of a number--\n"
+      "-----------------------------------------------------------------------\n"
+      "1- log10  2- ln")
+    user2= input("please enter the number of function or stop or back: ").lower()
+    while True:
+        if user2=="1":
+            user2="log10"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="2":
+            user2="ln"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="back":
+            scientific_mode()
+        elif user2=="stop":
+            exit()
+        else:
+            user2=input("The entry is invalid please try again: ").lower()
+            
+            
+def otherfunction(Value,DEG_RAD,user2):
+    print("--Welcome to other functions--\n"
+      "--Basic math functions like square root, absolute value, exponent, factorial, e, and π--\n"
+      "-----------------------------------------------------------------------\n"
+      "1- factorial  2- exp  3- e   4- pi")
+    user2= input("please enter the number of function or stop or back: ").lower()
+    while True:
+        if user2=="1":
+            user2="factorial"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="2":
+            user2="exp"
+            DEG_RAD1(Value,DEG_RAD,user2)
+        elif user2=="3":
+            user2="e"
+            calculations(Value,DEG_RAD,user2)
+        elif user2=="4":
+            user2="pi"
+            calculations(Value,DEG_RAD,user2)
+        elif user2=="back":
+            scientific_mode()
+        elif user2=="stop":
+            exit()
+        else:
+            user2=input("The entry is invalid please try again: ").lower()
+            
+            
 def DEG_RAD1(Value,DEG_RAD,user2):
     if user2=="log10" or user2=="ln"or user2=="factorial" or user2=="exp" or user2 =="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" or user2=="sech" or user2=="coth":
         Value1(Value,DEG_RAD,user2)
@@ -336,8 +473,10 @@ def DEG_RAD1(Value,DEG_RAD,user2):
         exit()
           
     elif DEG_RAD=="back":
-        scientific_mode()
-        return
+        if user2=="sin"or user2=="cos" or user2=="tan" or user2=="csc" or user2=="sec"or user2=="cot":
+            trifunction(Value,DEG_RAD,user2)
+        elif user2=="arcsin" or user2=="arccos" or user2=="arctan" or user2 == "arccsc" or user2 =="arcsec":
+            arcfunction(Value,DEG_RAD,user2)
     else:
         Value1(Value,DEG_RAD,user2)
     return
@@ -350,9 +489,12 @@ def Value1(Value,DEG_RAD,user2):
         if Value == "stop":
             exit()
             
-        elif Value=="back" and (user2=="log10" or user2=="ln"or user2=="factorial" or user2=="exp" or user2 =="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" or user2=="sech" or user2=="coth"):
-            scientific_mode() 
-            return
+        elif Value=="back" and (user2 =="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" or user2=="sech" or user2=="coth"):
+            hypfunction(Value,DEG_RAD,user2)
+        elif Value=="back" and (user2=="log10" or user2=="ln"):
+            logfunction(Value,DEG_RAD,user2)
+        elif Value=="back" and (user2=="factorial" or user2=="exp"):
+            otherfunction(Value,DEG_RAD,user2)
         elif Value == "back":
             DEG_RAD1(Value, DEG_RAD, user2)
             return
