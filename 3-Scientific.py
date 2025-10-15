@@ -300,12 +300,16 @@ def scientific_mode():
               break
           elif user2=="2":
               arcfunction(Value,DEG_RAD,user2)
+              break
           elif user2=="3":
               hypfunction(Value,DEG_RAD,user2)
+              break
           elif user2=="4":
               logfunction(Value,DEG_RAD,user2)
+              break
           elif user2=="5":
               otherfunction(Value,DEG_RAD,user2)
+              break
           elif user2=="stop":
               exit()
           else:
@@ -321,23 +325,30 @@ def trifunction(Value,DEG_RAD,user2):
         if user2=="1":
             user2="sin"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="2":
             user2="cos"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="3":
             user2="tan"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="4":
             user2="csc"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="5":
             user2="sec"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="6":
             user2="cot"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="back":
             scientific_mode()
+            break
         elif user2=="stop":
             exit()
         else:
@@ -353,21 +364,27 @@ def arcfunction(Value,DEG_RAD,user2):
         if user2=="1":
             user2="arcsin"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="2":
             user2="arccos"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="3":
             user2="arctan"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="4":
             user2="arccsc"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="5":
             user2="arcsec"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="6":
             user2="arccot"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="back":
             scientific_mode()
         elif user2=="stop":
@@ -385,23 +402,30 @@ def hypfunction(Value,DEG_RAD,user2):
         if user2=="1":
             user2="sinh"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="2":
             user2="cosh"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="3":
             user2="tanh"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="4":
             user2="csch"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="5":
             user2="sech"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="6":
             user2="coth"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="back":
             scientific_mode()
+            break
         elif user2=="stop":
             exit()
         else:
@@ -418,11 +442,14 @@ def logfunction(Value,DEG_RAD,user2):
         if user2=="1":
             user2="log10"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="2":
             user2="ln"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="back":
             scientific_mode()
+            break
         elif user2=="stop":
             exit()
         else:
@@ -439,17 +466,22 @@ def otherfunction(Value,DEG_RAD,user2):
         if user2=="1":
             user2="factorial"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="2":
             user2="exp"
             DEG_RAD1(Value,DEG_RAD,user2)
+            break
         elif user2=="3":
             user2="e"
             calculations(Value,DEG_RAD,user2)
+            break
         elif user2=="4":
             user2="pi"
             calculations(Value,DEG_RAD,user2)
+            break
         elif user2=="back":
             scientific_mode()
+            break
         elif user2=="stop":
             exit()
         else:
@@ -459,7 +491,7 @@ def otherfunction(Value,DEG_RAD,user2):
 def DEG_RAD1(Value,DEG_RAD,user2):
     if user2=="log10" or user2=="ln"or user2=="factorial" or user2=="exp" or user2 =="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" or user2=="sech" or user2=="coth":
         Value1(Value,DEG_RAD,user2)
-        return
+        
     else:
         
         DEG_RAD=input("degrees or radians or stop or back:: ").lower()
@@ -479,6 +511,7 @@ def DEG_RAD1(Value,DEG_RAD,user2):
             arcfunction(Value,DEG_RAD,user2)
     else:
         Value1(Value,DEG_RAD,user2)
+        
     return
 
 def Value1(Value,DEG_RAD,user2):
