@@ -339,7 +339,7 @@ def trifunction(Value,DEG_RAD,user2):
       "-----------------------------------------------------------------------\n"
       "1- sin  2- cos  3- tan  4- csc  5- sec  6- cot\n"
       "-----------------------------------------------------------------------")
-    user2= input("please enter the number of function or stop or back:")
+    user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
             user2="sin"
@@ -517,13 +517,18 @@ def DEG_RAD1(Value,DEG_RAD,user2):
         
     else:
         
-        DEG_RAD=input("\n\n\ndegrees or radians or stop or back:: ").lower()
+        DEG_RAD=input("\n\n\n(Enter 1 to degrees or 2 to radians) or stop or back: ")
+        
         while True:
+            if DEG_RAD=="1":
+               DEG_RAD="degrees"
+            elif DEG_RAD=="2":
+               DEG_RAD="radians"
             if DEG_RAD == "degrees" or DEG_RAD=="radians" or DEG_RAD=="stop" or DEG_RAD=="back":
 
                break
             else:
-                DEG_RAD=input("invild please choce degrees or radians: or stop or back: ").lower()
+                DEG_RAD=input("invild please choce the number of degrees or radians: or stop or back: ")
     if DEG_RAD=="stop":
         exit()
           
