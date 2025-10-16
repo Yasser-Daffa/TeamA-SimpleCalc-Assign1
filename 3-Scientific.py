@@ -17,7 +17,7 @@ def sinfunction(Value, DEG_RAD, user2):
         if DEG_RAD == "degrees":
             Value = math.radians(Value)
         sin_csc = math.sin(Value)
-    print("Result:", round(sin_csc,2),)
+    print(f"{colors['bright_green']}Result: {colors['reset']}", round(sin_csc,2),)
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -35,7 +35,7 @@ def cosfunction(Value, DEG_RAD, user2):
         if DEG_RAD == "degrees":
             Value = math.radians(Value)
         cos_sec = math.cos(Value)
-    print("Result:", round(cos_sec,2))
+    print(f"{colors['bright_green']}Result: {colors['reset']}", round(cos_sec,2))
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -53,7 +53,7 @@ def tanfunction(Value, DEG_RAD, user2):
         if DEG_RAD == "degrees":
             Value = math.radians(Value)
         tan_cot = math.tan(Value)
-    print("Result:", round(tan_cot,2))
+    print(f"{colors['bright_green']}Result: {colors['reset']}", round(tan_cot,2))
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -83,7 +83,7 @@ def arcsinfunction(Value, DEG_RAD, user2):
 
     if DEG_RAD == "degrees":
         result = math.degrees(result)
-    print("Result:", round(result,2))
+    print(f"{colors['bright_green']}Result: {colors['reset']}", round(result,2))
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -105,7 +105,7 @@ def arccosfunction(Value, DEG_RAD, user2):
 
     if DEG_RAD == "degrees":
         result = math.degrees(result)
-    print("Result:", round(result,2))
+    print(f"{colors['bright_green']}Result: {colors['reset']}", round(result,2))
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -122,7 +122,7 @@ def arctanfunction(Value, DEG_RAD, user2):
 
     if DEG_RAD == "degrees":
         result = math.degrees(result)
-    print("Result:", round(result,2))
+    print(f"{colors['bright_green']}Result: {colors['reset']}", round(result,2))
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -140,7 +140,7 @@ def sinhfunction(Value, DEG_RAD, user2):
        
         result = math.sinh(Value)
 
-    print("Result:", result)
+    print(f"{colors['bright_green']}Result: {colors['reset']}", result)
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -153,7 +153,7 @@ def coshfunction(Value, DEG_RAD, user2):
        
         result = math.cosh(Value)
 
-    print("Result:", result)
+    print(f"{colors['bright_green']}Result: {colors['reset']}", result)
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -170,7 +170,7 @@ def tanhfunction(Value, DEG_RAD, user2):
        
         result = math.tanh(Value)
 
-    print("Result:", round(result,2))
+    print(f"{colors['bright_green']}Result: {colors['reset']}", round(result,2))
     Value1(Value,DEG_RAD,user2)
 
 
@@ -182,7 +182,7 @@ def log_function(Value, DEG_RAD, user2):
         return
      else:
         Value= math.log10(Value)
-        print("result: ",round(Value,2))
+        print(f"{colors['bright_green']}Result: {colors['reset']}",round(Value,2))
         Value1(Value,DEG_RAD,user2)
         
 def ln_function(Value, DEG_RAD, user2):
@@ -192,7 +192,7 @@ def ln_function(Value, DEG_RAD, user2):
         return
      else:
         Value= math.log(Value)
-        print("result: ",round(Value,2))
+        print(f"{colors['bright_green']}Result: {colors['reset']}",round(Value,2))
         Value1(Value,DEG_RAD,user2)
 
 def i_function(Value, DEG_RAD, user2):
@@ -201,21 +201,28 @@ def i_function(Value, DEG_RAD, user2):
         Value1(Value,DEG_RAD,user2)
         return
      else:
-        Value= math.factorial(Value)
-        print("result: ",round(Value,2))
+        Value= math.factorial(int(Value))
+        print(f"{colors['bright_green']}Result: {colors['reset']}",round(Value,2))
         Value1(Value,DEG_RAD,user2)
         
 def exp_function(Value, DEG_RAD, user2):
-    print("result: ",round(math.exp(Value),2))
+    print(f"{colors['bright_green']}Result: {colors['reset']}",round(math.exp(Value),2))
     Value1(Value,DEG_RAD,user2)
     
     
 def e_pi_function(user2):
+
     if user2 =="e":
-        print("result: ",round(math.e,2))
+        print(f"{colors['bright_green']}Result: {colors['reset']}",round(math.e,2))
+        otherfunction(Value=1,DEG_RAD=1,user2=1)
+        
         
     elif user2=="pi":
-        print("result", round(math.pi,2))
+        print(f"{colors['bright_green']}Result: {colors['reset']}", round(math.pi,2))
+        otherfunction(Value=1,DEG_RAD=1,user2=1)
+    
+    
+        
         
     
 
@@ -397,7 +404,7 @@ def arcfunction(Value,DEG_RAD,user2):
             break
         elif user2 in ("back","return","leave"):
             scientific()
-        elif user2=="stop":
+        elif user2 in ("stop","exit","end"):
             hf.return_main_menu()
         else:
             user2=input(f"{colors['bright_red']}The entry is invalid! {colors['cyan']}please try again: {colors['reset']}")
@@ -441,7 +448,7 @@ def hypfunction(Value,DEG_RAD,user2):
         elif user2 in ("back","return","leave"):
             scientific()
             break
-        elif user2=="stop":
+        elif user2 in ("stop","exit","end"):
             hf.return_main_menu()
         else:
             user2=input(f"{colors['bright_red']}The entry is invalid! {colors['cyan']}please try again: {colors['reset']}")
@@ -469,7 +476,7 @@ def logfunction(Value,DEG_RAD,user2):
         elif user2 in ("back","return","leave"):
             scientific()
             break
-        elif user2=="stop":
+        elif user2 in ("stop","exit","end"):
             hf.return_main_menu()
         else:
             user2=input(f"{colors['bright_red']}The entry is invalid! {colors['cyan']}please try again: {colors['reset']}")
@@ -537,7 +544,7 @@ def DEG_RAD1(Value,DEG_RAD,user2):
     elif DEG_RAD in ("back","return","leave"):
         if user2=="sin"or user2=="cos" or user2=="tan" or user2=="csc" or user2=="sec"or user2=="cot":
             trifunction(Value,DEG_RAD,user2)
-        elif user2=="arcsin" or user2=="arccos" or user2=="arctan" or user2 == "arccsc" or user2 =="arcsec":
+        elif user2=="arcsin" or user2=="arccos" or user2=="arctan" or user2 == "arccsc" or user2 =="arcsec" or user2 =="arccot":
             arcfunction(Value,DEG_RAD,user2)
     else:
         Value1(Value,DEG_RAD,user2)
