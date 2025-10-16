@@ -107,11 +107,14 @@ def percent_function():
     
     while True:
         expression = input(f"{colors['blue']}Enter a number in percent like 55% (or {colors['yellow']}'back'{colors['blue']} to return): {colors['reset']}")
-        if expression.lower() in ("stop", "back", "exit", "leave", "end", "bye", "return"):
-            print(colors["bright_yellow"] + colors["bold"] + "\n**Exiting Percent mode**" + colors['reset'])
+        if expression in ("back", "leave", "return"):
+            print("\n"+" "*12+f"{colors['bold']}{colors['yellow']}Going Back...\n{colors['reset']}")
             break
+        elif expression in ("exit","stop","end"):
+            print(colors['yellow'] + colors['bold'] + "\n**Exiting Mode... Goodbye!**\n" + colors['reset'])
+            hf.return_main_menu()
         
-        if "%" in expression:
+        elif "%" in expression:
             expression = expression.replace("%", "/100")
             try:
                 result = eval(expression)
