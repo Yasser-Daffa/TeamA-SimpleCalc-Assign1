@@ -4,6 +4,16 @@ A simple multi-mode calculator with four functions:
 **Standard**, **Programmer**, **Scientific**, and **Converter** modes.  
 Developed as a small group project by **Team A**.
 
+# Navigation:
+
+- 1, 2, 3, ... n: Choose what you want to do in the menu.
+
+- Type a number → see the result.
+
+- back / return / leave: Goes to the previous sub-menu.
+
+- exit / stop / end: returns to main menu (for the original program)
+  
 ---
 
 ## 1. Standard Mode  
@@ -26,15 +36,16 @@ Developed as a small group project by **Team A**.
 **By:** Mohanned & Ahmed  
 
 ### Error Handling
-1.  
-2.  
-3.  
-4.  
-5.  
+1. The program uses try–except to stop the program from crashing when the user enters wrong input.
+2. If the user types text or symbols instead of a number, it shows a error message. 
+3.  The code checks that the input is an integer only, not a float number.
+4. If the user chooses a wrong menu number, the program says “Invalid choice” and asks again. 
+5.  Loops are used to ask again until the user gives a correct input.
+6.  The program prevents wrong base numbers and wrong formats when converting between bases.
 
 ### Difficulties Faced
--  
--  
+-  We did not know that BITWISE functions existed in python (we rewrote the code due to that)
+-  The bitwise NOT (~) result was difficult to understand because it gives negative numbers.
 
 ---
 
