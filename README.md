@@ -13,7 +13,10 @@ Developed as a small group project by **Team A**.
 - back / return / leave: Goes to the previous sub-menu.
 
 - exit / stop / end: returns to main menu (for the original program)
+
   
+  **Developers' note:** We noticed difficulty when returning to the original main menu, which houses all the sub-modules.
+                    So we added these navigation keywords to help mitigate that problem.
 ---
 
 ## 1. Standard Mode  
