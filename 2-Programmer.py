@@ -60,3 +60,62 @@ def convert_base():
                 print(f" Error Invalid number format for base {base}. Please ensure all digits are valid.")
         else:
             print("Error Invalid original base selection")
+def bitwise_operations():
+
+    print("\n--- Bitwise Operations ---")
+    
+    num1 = valid_integer("Enter the first integer: ")
+    
+    operator = input("Enter the operation (1 for &, 2 for |, 3 for ^, 4 for <<, 5 for >>, 6 for ~ ): ")
+    
+    if operator == "6":
+        result = ~num1
+        print(f"\n Decimal Result: {result}")
+        print(f" Binary Result: {bin(result)}")
+        return
+        
+    num2 = valid_integer("Enter the second integer (or the shift amount for << and >>): ")
+    
+    if operator == "1":
+        result = num1 & num2
+    elif operator == "2":
+        result = num1 | num2  
+    elif operator == "3":
+        result = num1 ^ num2  
+    elif operator == "4":
+        result = num1 << num2 
+    elif operator == "5":
+        result = num1 >> num2 
+    else:
+        print("Error Invalid operation")
+        return
+
+    print(f"\n Decimal Result: {result}")
+    print(f" Binary Result: {bin(result)}")
+
+def menu_programmer_mode():
+
+    print("\n===========================================")
+    print("   Welcome to Programmer Mode Calculator  ")
+    print("===========================================")
+    
+    while True:
+        print("\nSelect an operation:")
+        print("1. Base Conversions")
+        print("2. Bitwise Operations")
+        print("3. Exit")
+        
+        choice = input("Enter your choice (1 or 2 or 3) ")
+        
+        if choice == '1':
+            convert_base()
+        elif choice == '2':
+            bitwise_operations()
+        elif choice == '3':
+            print("Exit")
+            break
+        else:
+            print("Error Invalid choice, Please try again.")
+
+menu_programmer_mode()
+
