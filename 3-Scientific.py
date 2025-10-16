@@ -14,7 +14,7 @@ def sinfunction(Value, DEG_RAD, user2):
         if DEG_RAD == "degrees":
             Value = math.radians(Value)
         sin_csc = math.sin(Value)
-    print("Result:", round(sin_csc,2))
+    print("Result:", round(sin_csc,2),)
     Value1(Value,DEG_RAD,user2)
     return
 
@@ -307,7 +307,8 @@ def scientific_mode():
       "3- Hyperbolic functions\n"
       "4- logarthmic functions\n"
       "5- other functions:\n")
-      user2 = input("Enter the number of function or stop if you want end: ")
+      
+      user2 = input("Enter the number of function or stop if you want end or back: ")
       while True:
           if user2=="1":
               trifunction(Value,DEG_RAD,user2)
@@ -326,15 +327,17 @@ def scientific_mode():
               break
           elif user2=="stop":
               exit()
+          elif user2=="back":
+              main_menu()
           else:
               user2=input("invild name pleas Enter the function or stop: ")
       
 def trifunction(Value,DEG_RAD,user2):
-    print("--Welcome to Trigonometric functions--\n"
+    print("\n\n\n--Welcome to Trigonometric functions--\n"
       "--Functions that use angles to find relationships between the sides of a triangle--\n"
       "-----------------------------------------------------------------------\n"
       "1- sin  2- cos  3- tan  4- csc  5- sec  6- cot")
-    user2= input("please enter the number of function or stop or back: ")
+    user2= input("please enter the number of function or stop or back:")
     while True:
         if user2=="1":
             user2="sin"
@@ -369,7 +372,7 @@ def trifunction(Value,DEG_RAD,user2):
             user2=input("The entry is invalid please try again: ")
         
 def arcfunction(Value,DEG_RAD,user2):
-    print("--Welcome to Inverse trigonometric functions--\n"
+    print("\n\n\n--Welcome to Inverse trigonometric functions--\n"
       "--These give you the angle when you already know the trigonometric value--\n"
       "-----------------------------------------------------------------------\n"
       "1- arcsin  2- arccos  3- arctan  4- arccsc  5- arcsec  6- arccot")
@@ -407,7 +410,7 @@ def arcfunction(Value,DEG_RAD,user2):
             user2=input("The entry is invalid please try again: ")
             
 def hypfunction(Value,DEG_RAD,user2):
-    print("--Welcome to Hyperbolic functions--\n"
+    print("\n\n\n--Welcome to Hyperbolic functions--\n"
       "--Similar to trigonometric functions but based on exponential equations--\n"
       "-----------------------------------------------------------------------\n"
       "1- sinh  2- cosh  3- tanh  4- csch  5- sech  6- coth")
@@ -447,7 +450,7 @@ def hypfunction(Value,DEG_RAD,user2):
             
             
 def logfunction(Value,DEG_RAD,user2):
-    print("--Welcome to logarthmic functions--\n"
+    print("\n\n\n--Welcome to logarthmic functions--\n"
       "--Used to find the power or exponent of a number--\n"
       "-----------------------------------------------------------------------\n"
       "1- log10  2- ln")
@@ -471,7 +474,7 @@ def logfunction(Value,DEG_RAD,user2):
             
             
 def otherfunction(Value,DEG_RAD,user2):
-    print("--Welcome to other functions--\n"
+    print("\n\n\n--Welcome to other functions--\n"
       "--Basic math functions like square root, absolute value, exponent, factorial, e, and π--\n"
       "-----------------------------------------------------------------------\n"
       "1- factorial  2- exp  3- e   4- pi")
@@ -508,7 +511,7 @@ def DEG_RAD1(Value,DEG_RAD,user2):
         
     else:
         
-        DEG_RAD=input("degrees or radians or stop or back:: ").lower()
+        DEG_RAD=input("\n\n\ndegrees or radians or stop or back:: ").lower()
         while True:
             if DEG_RAD == "degrees" or DEG_RAD=="radians" or DEG_RAD=="stop" or DEG_RAD=="back":
 
@@ -531,7 +534,7 @@ def DEG_RAD1(Value,DEG_RAD,user2):
 def Value1(Value,DEG_RAD,user2):
 
     while True:
-        Value = input("Enter value or stop or back: ")
+        Value = input("\n\n\nEnter value or stop or back: ")
 
         if Value == "stop":
             exit()
