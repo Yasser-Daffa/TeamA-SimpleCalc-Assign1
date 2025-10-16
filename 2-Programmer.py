@@ -32,8 +32,9 @@ def convert_base():
         )
         if choice == "back":
             break
-        elif choice not in ("1","2"):
-            print(f"{colors['bright_red']}Invalid selection!! Please select numbers 1 or 2")
+        elif choice not in (1, 2):
+            print(f"{colors['bright_red']}Invalid selection!! Please select numbers 1 or 2{colors['reset']}")
+            continue
 
         # ---------- Decimal to Other Base ----------
         if choice == 1:
@@ -85,9 +86,9 @@ def convert_base():
         elif choice == 2:
             while True:
                 print(f"\n{colors['magenta']}What is the original base of the number?{colors['reset']}")
-                print(f"1.{colors['bright_yellow']} Binary (Base 2)")
-                print(f"2.{colors['bright_yellow']} Octal (Base 8)")
-                print(f"3.{colors['bright_yellow']} Hexadecimal (Base 16)")
+                print(f"1.{colors['bright_yellow']} Binary (Base 2 ex. 1101 → 13)")
+                print(f"2.{colors['bright_yellow']} Octal (Base 8 ex. 15 → 13)")
+                print(f"3.{colors['bright_yellow']} Hexadecimal (Base 16 ex. D → 13)")
 
                 choice_num = input(f"{colors['blue']}Enter conversion type (1-3): {colors['reset']}")
                 if choice_num in ("back", "leave", "return"):
