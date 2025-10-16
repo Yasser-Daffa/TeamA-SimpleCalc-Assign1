@@ -52,8 +52,14 @@ def valid_input_function(prompt_message, allow_float=False, allow_negative=True)
     while True:
         user_input = input(prompt_message)
 
-        if user_input.lower() in ("stop", "back", "exit", "leave", "end", "bye", "return"):
-            return "exit"
+        if user_input.lower() in ("back", "leave", "return"):
+            print("\n"+" "*12+f"{colors['bold']}{colors['yellow']}Going Back...\n{colors['reset']}")
+            return "back"
+        
+        if user_input in ("exit", "stop", "end"):
+            print(colors['yellow'] + colors['bold'] + "\n**Exiting Mode... Goodbye!**\n" + colors['reset'])
+            return_main_menu()
+
 
         try:
             evaluated = float(eval(user_input))  # evaluate simple math expressions
@@ -90,11 +96,13 @@ def unit_choice_function(prompt, units_list):
             print_list_function(units_list)
             continue
 
-        elif choice.lower() in ("back", "leave", "end", "bye", "return"):
-            return "exit"
+        elif choice.lower() in ("back", "leave", "bye", "return"):
+            return "back"
         
         elif choice.lower() in ("stop", "exit", "end"):
-            return exit()
+            print("\n"+" "*12+f"{colors['bold']}{colors['yellow']}Exiting mode... Goodbye!\n{colors['reset']}")
+            return_main_menu()
+            
         
         try:
             if not float(choice).is_integer():
@@ -145,45 +153,6 @@ def print_list_function(your_list,max_rows=4,spacing=12):
         print()  # move to next line after each row
     print()
 
- 
-
-def unit_pair_function(units_list, category_name="unit"):
-    """
-    Another function made to reduce repetition.
-    It prompts the user to choose 'from' and 'to' units.
-    Returns a tuple (from_unit_index, to_unit_index)
-    or 'exit' if the user chooses to leave.
-
-    paramaters:
-        units_list (list): List of available units.
-        category_name (str): Optional name for category (e.g., 'temperature').
-    """
-
-    while True:
-        user_unit_from = unit_choice_function(
-            f"{colors['cyan']}({colors['yellow']}'back'{colors['cyan']} leaves."
-            f"{colors['yellow']}'list'{colors['cyan']} displays table again) "
-            f"\n{colors['bold']}{colors['cyan']}Choose {category_name} to convert {colors['bright_white']}FROM: "
-            f"{colors['reset']}",
-            units_list
-        )
-        if user_unit_from == "exit":
-            print("\n"+" "*10 + f"{colors['bold']}{colors['bright_yellow']}*Back to Converter Menu*\n{colors['reset']}")
-            return "exit"
-        
-        user_unit_to = unit_choice_function(
-            f"\n{colors['cyan']}({colors['yellow']}'back'{colors['cyan']} leaves."
-            f"{colors['yellow']}'list'{colors['cyan']} displays table again) "
-            f"\n{colors['bold']}{colors['cyan']}Choose {category_name} to convert {colors['bright_white']}TO: "
-            f"{colors['reset']}",
-            units_list
-        )
-        if user_unit_to == "exit":
-            print("\n"+" "*10 + f"{colors['bold']}{colors['bright_yellow']}*Back to Converter Menu*\n{colors['reset']}")
-            return "exit"
-
-        return (user_unit_from, user_unit_to)
-    
 
 
 def print_welcome_message(info_message,category_name):
@@ -202,6 +171,13 @@ def print_welcome_message(info_message,category_name):
         print(
         "-" * 40 + f"{colors['bold']}{colors['bright_magenta']}\n"
         f"--Welcome to {colors['bright_blue']}{category_name}{colors['bright_magenta']} Mode--" 
-        f"{colors['cyan']}\n*INFO: {colors['reset']}{colors['cyan']} {info_message}.*{colors['reset']}\n"
+        f"{colors['cyan']}{colors['bold']}\n*INFO:{colors['bright_white']} {info_message}.{colors['cyan']}*{colors['reset']}\n"
         + "-" * 40 
         )
+
+
+
+def return_main_menu():
+    from main_menu import all_modes_menu
+    all_modes_menu()
+    return
