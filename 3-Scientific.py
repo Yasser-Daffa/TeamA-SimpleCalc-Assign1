@@ -306,7 +306,8 @@ def scientific_mode():
       "2- Inverse trigonometric functions:\n"
       "3- Hyperbolic functions\n"
       "4- logarthmic functions\n"
-      "5- other functions:\n")
+      "5- other functions:\n"
+      "-----------------------------------------------------------------------")
       
       user2 = input("Enter the number of function or stop if you want end or back: ")
       while True:
@@ -336,7 +337,8 @@ def trifunction(Value,DEG_RAD,user2):
     print("\n\n\n--Welcome to Trigonometric functions--\n"
       "--Functions that use angles to find relationships between the sides of a triangle--\n"
       "-----------------------------------------------------------------------\n"
-      "1- sin  2- cos  3- tan  4- csc  5- sec  6- cot")
+      "1- sin  2- cos  3- tan  4- csc  5- sec  6- cot\n"
+      "-----------------------------------------------------------------------")
     user2= input("please enter the number of function or stop or back:")
     while True:
         if user2=="1":
@@ -375,7 +377,8 @@ def arcfunction(Value,DEG_RAD,user2):
     print("\n\n\n--Welcome to Inverse trigonometric functions--\n"
       "--These give you the angle when you already know the trigonometric value--\n"
       "-----------------------------------------------------------------------\n"
-      "1- arcsin  2- arccos  3- arctan  4- arccsc  5- arcsec  6- arccot")
+      "1- arcsin  2- arccos  3- arctan  4- arccsc  5- arcsec  6- arccot\n"
+      "-----------------------------------------------------------------------")
     user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
@@ -413,7 +416,8 @@ def hypfunction(Value,DEG_RAD,user2):
     print("\n\n\n--Welcome to Hyperbolic functions--\n"
       "--Similar to trigonometric functions but based on exponential equations--\n"
       "-----------------------------------------------------------------------\n"
-      "1- sinh  2- cosh  3- tanh  4- csch  5- sech  6- coth")
+      "1- sinh  2- cosh  3- tanh  4- csch  5- sech  6- coth\n"
+      "-----------------------------------------------------------------------")
     user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
@@ -453,7 +457,8 @@ def logfunction(Value,DEG_RAD,user2):
     print("\n\n\n--Welcome to logarthmic functions--\n"
       "--Used to find the power or exponent of a number--\n"
       "-----------------------------------------------------------------------\n"
-      "1- log10  2- ln")
+      "1- log10  2- ln\n"
+      "-----------------------------------------------------------------------")
     user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
@@ -477,7 +482,8 @@ def otherfunction(Value,DEG_RAD,user2):
     print("\n\n\n--Welcome to other functions--\n"
       "--Basic math functions like square root, absolute value, exponent, factorial, e, and π--\n"
       "-----------------------------------------------------------------------\n"
-      "1- factorial  2- exp  3- e   4- pi")
+      "1- factorial  2- exp  3- e   4- pi\n"
+      "-----------------------------------------------------------------------")
     user2= input("please enter the number of function or stop or back: ")
     while True:
         if user2=="1":
