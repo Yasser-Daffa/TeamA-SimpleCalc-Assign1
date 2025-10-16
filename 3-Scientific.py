@@ -1,4 +1,7 @@
 import math
+import helper_functions as hf
+colors = hf.colors_function()
+
 def sinfunction(Value, DEG_RAD, user2):
     if user2 == "csc":
         Value0 = Value if DEG_RAD == "degrees" else math.degrees(Value)
@@ -22,7 +25,7 @@ def cosfunction(Value, DEG_RAD, user2):
     if user2 == "sec":
         Value0 = Value if DEG_RAD == "degrees" else math.degrees(Value)
         if Value0 % 180 == 90:
-            print("Value not valid for sec (cos=0)")
+            print(f"{colors['bright_red']}Value not valid for sec (cos=0){colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
         if DEG_RAD == "degrees":
@@ -40,7 +43,7 @@ def tanfunction(Value, DEG_RAD, user2):
     if user2 == "cot":
         Value0 = Value if DEG_RAD == "degrees" else math.degrees(Value)
         if Value0 % 180 == 0 :
-            print("Value not valid for cot (tan=0)")
+            print(f"{colors['bright_red']}Value not valid for cot (tan=0){colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
         if DEG_RAD == "degrees":
@@ -66,7 +69,7 @@ def tanfunction(Value, DEG_RAD, user2):
 def arcsinfunction(Value, DEG_RAD, user2):
     if user2 == "arccsc":
         if Value == 0:
-            print("Value cannot be 0 for arccsc")
+            print(f"{colors['bright_red']}Value cannot be 0 for arccsc{colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
         result = math.asin(1 / Value)
@@ -74,7 +77,7 @@ def arcsinfunction(Value, DEG_RAD, user2):
         if -1 <= Value <= 1:
             result = math.asin(Value)
         else:
-            print("The number must be between -1 and 1")
+            print(f"{colors['bright_red']}The number must be between -1 and 1{colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
 
@@ -88,7 +91,7 @@ def arcsinfunction(Value, DEG_RAD, user2):
 def arccosfunction(Value, DEG_RAD, user2):
     if user2 == "arcsec":
         if Value == 0:
-            print("Value cannot be 0 for arcsec")
+            print(f"{colors['bright_red']}Value cannot be 0 for arcsec{colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
         result = math.acos(1 / Value)
@@ -96,7 +99,7 @@ def arccosfunction(Value, DEG_RAD, user2):
         if -1 <= Value <= 1:
             result = math.acos(Value)
         else:
-            print("The number must be between -1 and 1")
+            print(f"{colors['bright_red']}The number must be between -1 and 1{colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
 
@@ -110,7 +113,7 @@ def arccosfunction(Value, DEG_RAD, user2):
 def arctanfunction(Value, DEG_RAD, user2):
     if user2 == "arccot":
         if Value == 0:
-            print("Value cannot be 0 for arccot")
+            print(f"{colors['bright_red']}Value cannot be 0 for arccot{colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
         result = math.atan(1 / Value)
@@ -125,18 +128,11 @@ def arctanfunction(Value, DEG_RAD, user2):
 
 
 
-
-
-
-
-
-
-
 def sinhfunction(Value, DEG_RAD, user2):
     if user2 == "csch":
         
         if Value == 0:
-            print("Value cannot be 0 for csch")
+            print(f"{colors['bright_red']}Value cannot be 0 for csch{colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
         result = 1 / math.sinh(Value)
@@ -166,7 +162,7 @@ def tanhfunction(Value, DEG_RAD, user2):
     if user2 == "coth":
         
         if Value == 0:
-            print("Value cannot be 0 for coth")
+            print(f"{colors['bright_red']}Value cannot be 0 for coth{colors['reset']}")
             Value1(Value, DEG_RAD, user2)
             return
         result = 1 / math.tanh(Value)
@@ -179,14 +175,9 @@ def tanhfunction(Value, DEG_RAD, user2):
 
 
 
-
-
-
-
-
 def log_function(Value, DEG_RAD, user2):
      if Value <= 0:
-        print("the number must be > 0 try again")
+        print(f"{colors['bright_red']}the number must be > 0 try again{colors['reset']}")
         Value1(Value,DEG_RAD,user2)
         return
      else:
@@ -196,7 +187,7 @@ def log_function(Value, DEG_RAD, user2):
         
 def ln_function(Value, DEG_RAD, user2):
      if Value <= 0:
-        print("the number must be > 0 try again")
+        print(f"{colors['bright_red']}the number must be > 0 try again{colors['reset']}")
         Value1(Value,DEG_RAD,user2)
         return
      else:
@@ -206,7 +197,7 @@ def ln_function(Value, DEG_RAD, user2):
 
 def i_function(Value, DEG_RAD, user2):
      if Value < 0 or not float(Value).is_integer():
-        print("the number must be > 0 and  not float try again")
+        print(f"{colors['bright_red']}the number must be > 0 and  not float try again{colors['reset']}")
         Value1(Value,DEG_RAD,user2)
         return
      else:
@@ -227,11 +218,6 @@ def e_pi_function(user2):
         print("result", round(math.pi,2))
         
     
-
-
-
-
-
 
 def calculations(Value,DEG_RAD,user2):
     
@@ -255,8 +241,6 @@ def calculations(Value,DEG_RAD,user2):
           elif  user2 == "arctan" or user2=="arccot": 
               arctanfunction(Value,DEG_RAD,user2)
            
-          
-          
           
           elif user2 == "sinh" or user2== "csch":
               sinhfunction(Value,DEG_RAD,user2)
@@ -284,32 +268,29 @@ def calculations(Value,DEG_RAD,user2):
          
         
           else:
-              user2=input("the name of function invild try again ")
+              user2=input(f"{colors['bright_red']}the name of function invild try again {colors['reset']}")
           return          
               
               
 
-    
-
-
-
-
-
-def scientific_mode():
+def scientific():
       Value=0
       DEG_RAD=0
+
+      print()
+      hf.print_welcome_message("there are specific functions that perform only a specific task",
+                               f"{colors['bright_yellow']}Scientific-Mode{colors['reset']}")
+
+      print(
+      f"{colors['bright_cyan']}1.{colors['bright_white']} Trigonometric functions:\n"
+      f"{colors['bright_cyan']}2.{colors['bright_white']} Inverse trigonometric functions:\n"
+      f"{colors['bright_cyan']}3.{colors['bright_white']} Hyperbolic functions\n"
+      f"{colors['bright_cyan']}4.{colors['bright_white']} logarthmic functions\n"
+      f"{colors['bright_cyan']}5.{colors['bright_white']} other functions:\n"
+      "----------------------------------------")
       
-      print("--Welcome to scientific_mode--\n"
-      "--Here there are specific functions that perform only a specific task--\n"
-      "-----------------------------------------------------------------------\n"
-      "1- Trigonometric functions:\n"
-      "2- Inverse trigonometric functions:\n"
-      "3- Hyperbolic functions\n"
-      "4- logarthmic functions\n"
-      "5- other functions:\n"
-      "-----------------------------------------------------------------------")
-      
-      user2 = input("Enter the number of function or stop if you want end or back: ")
+      user2 = input(f"{colors['cyan']}Enter the number of function "
+                    f"({colors['bright_yellow']}'stop' {colors['cyan']}or {colors['bright_yellow']}'back'{colors['cyan']} if you want to end): {colors['reset']}")
       while True:
           if user2=="1":
               trifunction(Value,DEG_RAD,user2)
@@ -326,20 +307,25 @@ def scientific_mode():
           elif user2=="5":
               otherfunction(Value,DEG_RAD,user2)
               break
-          elif user2=="stop":
-              exit()
-          elif user2=="back":
-              main_menu()
+          elif user2 in ("exit","stop","end"):
+              print(colors['bright_yellow'] + colors['bold'] + "\n**Exiting Scientific Mode... Goodbye!**\n" + colors['reset'])
+              hf.return_main_menu()
+          elif user2 in ("back","return","leave"):
+              print("")
+              break
           else:
-              user2=input("invild name pleas Enter the function or stop: ")
+              user2=input(f"{colors['bright_red']}invild name.. {colors['cyan']}please Enter the function or stop: {colors['reset']}")
       
 def trifunction(Value,DEG_RAD,user2):
-    print("\n\n\n--Welcome to Trigonometric functions--\n"
-      "--Functions that use angles to find relationships between the sides of a triangle--\n"
-      "-----------------------------------------------------------------------\n"
-      "1- sin  2- cos  3- tan  4- csc  5- sec  6- cot\n"
-      "-----------------------------------------------------------------------")
-    user2= input("please enter the number of function or stop or back: ")
+    print()
+    hf.print_welcome_message("Functions that use angles to find relationships between the sides of a triangle","Trigonometric")
+    print(
+      "\n"
+      f"{colors['bold']}1- Sin  2- Cos  3- Tan"
+      f"\n4- Csc  5- Sec  6- Cot\n{colors['reset']}"
+      "----------------------------------------")
+    user2= input(f"{colors['cyan']}\nChoose Function or "
+                      f"({colors['bright_yellow']}'stop'{colors['cyan']} or {colors['bright_yellow']}back{colors['cyan']}): {colors['reset']}")
     while True:
         if user2=="1":
             user2="sin"
@@ -365,21 +351,25 @@ def trifunction(Value,DEG_RAD,user2):
             user2="cot"
             DEG_RAD1(Value,DEG_RAD,user2)
             break
-        elif user2=="back":
-            scientific_mode()
+        elif user2 in ("back","return","leave"):
+            scientific()
             break
-        elif user2=="stop":
-            exit()
+        elif user2 in ("stop","exit","end"):
+            hf.return_main_menu()
         else:
-            user2=input("The entry is invalid please try again: ")
+            user2=input(f"{colors['bright_red']}\nThe entry is invalid {colors['blue']} please try again: {colors['reset']}")
         
 def arcfunction(Value,DEG_RAD,user2):
-    print("\n\n\n--Welcome to Inverse trigonometric functions--\n"
-      "--These give you the angle when you already know the trigonometric value--\n"
-      "-----------------------------------------------------------------------\n"
-      "1- arcsin  2- arccos  3- arctan  4- arccsc  5- arcsec  6- arccot\n"
-      "-----------------------------------------------------------------------")
-    user2= input("please enter the number of function or stop or back: ")
+    print()
+    hf.print_welcome_message("These give you the angle when you already know the trigonometric value","Inverse trigonometric")
+    print(
+      "\n"
+      f"{colors['bold']}1- ArcSin  2- ArcCos  3- ArcTan"
+      f"\n4- ArcCsc  5- ArcSec  6- ArcCot\n{colors['reset']}"
+      "----------------------------------------")
+
+    user2= input(f"{colors['cyan']}\nChoose Function or "
+                      f"({colors['bright_yellow']}'stop'{colors['cyan']} or {colors['bright_yellow']}back{colors['cyan']}): {colors['reset']}")
     while True:
         if user2=="1":
             user2="arcsin"
@@ -405,20 +395,24 @@ def arcfunction(Value,DEG_RAD,user2):
             user2="arccot"
             DEG_RAD1(Value,DEG_RAD,user2)
             break
-        elif user2=="back":
-            scientific_mode()
+        elif user2 in ("back","return","leave"):
+            scientific()
         elif user2=="stop":
-            exit()
+            hf.return_main_menu()
         else:
-            user2=input("The entry is invalid please try again: ")
+            user2=input(f"{colors['bright_red']}The entry is invalid! {colors['cyan']}please try again: {colors['reset']}")
             
 def hypfunction(Value,DEG_RAD,user2):
-    print("\n\n\n--Welcome to Hyperbolic functions--\n"
-      "--Similar to trigonometric functions but based on exponential equations--\n"
-      "-----------------------------------------------------------------------\n"
-      "1- sinh  2- cosh  3- tanh  4- csch  5- sech  6- coth\n"
-      "-----------------------------------------------------------------------")
-    user2= input("please enter the number of function or stop or back: ")
+    print()
+    hf.print_welcome_message("Similar to trigonometric functions but based on exponential equations","Hyperbolic")
+    print(
+      "\n"
+      f"{colors['bold']}1- Sinh  2- Cosh  3- Tanh"
+      f"\n4- Csch  5- Sech  6- Coth\n{colors['reset']}"
+      "----------------------------------------")
+    
+    user2= input(f"{colors['cyan']}\nChoose Function or "
+                      f"({colors['bright_yellow']}'stop'{colors['cyan']} or {colors['bright_yellow']}back{colors['cyan']}): {colors['reset']}")
     while True:
         if user2=="1":
             user2="sinh"
@@ -444,22 +438,25 @@ def hypfunction(Value,DEG_RAD,user2):
             user2="coth"
             DEG_RAD1(Value,DEG_RAD,user2)
             break
-        elif user2=="back":
-            scientific_mode()
+        elif user2 in ("back","return","leave"):
+            scientific()
             break
         elif user2=="stop":
-            exit()
+            hf.return_main_menu()
         else:
-            user2=input("The entry is invalid please try again: ")
+            user2=input(f"{colors['bright_red']}The entry is invalid! {colors['cyan']}please try again: {colors['reset']}")
             
             
 def logfunction(Value,DEG_RAD,user2):
-    print("\n\n\n--Welcome to logarthmic functions--\n"
-      "--Used to find the power or exponent of a number--\n"
-      "-----------------------------------------------------------------------\n"
-      "1- log10  2- ln\n"
-      "-----------------------------------------------------------------------")
-    user2= input("please enter the number of function or stop or back: ")
+    print()
+    hf.print_welcome_message("Used to find the power or exponent of a number","logarthmic")
+    print(
+      "\n"
+      f"{colors['bold']}1- log10  2- ln\n{colors['reset']}"
+      "----------------------------------------")
+
+    user2= input(f"{colors['cyan']}\nChoose Function or "
+                      f"({colors['bright_yellow']}'stop'{colors['cyan']} or {colors['bright_yellow']}back{colors['cyan']}): {colors['reset']}")
     while True:
         if user2=="1":
             user2="log10"
@@ -469,22 +466,25 @@ def logfunction(Value,DEG_RAD,user2):
             user2="ln"
             DEG_RAD1(Value,DEG_RAD,user2)
             break
-        elif user2=="back":
-            scientific_mode()
+        elif user2 in ("back","return","leave"):
+            scientific()
             break
         elif user2=="stop":
-            exit()
+            hf.return_main_menu()
         else:
-            user2=input("The entry is invalid please try again: ")
+            user2=input(f"{colors['bright_red']}The entry is invalid! {colors['cyan']}please try again: {colors['reset']}")
             
             
 def otherfunction(Value,DEG_RAD,user2):
-    print("\n\n\n--Welcome to other functions--\n"
-      "--Basic math functions like square root, absolute value, exponent, factorial, e, and π--\n"
-      "-----------------------------------------------------------------------\n"
-      "1- factorial  2- exp  3- e   4- pi\n"
-      "-----------------------------------------------------------------------")
-    user2= input("please enter the number of function or stop or back: ")
+    print()
+    hf.print_welcome_message("Basic math functions like square root, absolute value, exponent, factorial, e, and π","other")
+    print(
+      "\n"
+      f"{colors['bold']}1- factorial  2- exp  3- e   4- pi\n{colors['reset']}"
+      "----------------------------------------")
+
+    user2= input(f"{colors['cyan']}\nChoose Function or "
+                      f"({colors['bright_yellow']}'stop'{colors['cyan']} or {colors['bright_yellow']}back{colors['cyan']}): {colors['reset']}")
     while True:
         if user2=="1":
             user2="factorial"
@@ -502,13 +502,13 @@ def otherfunction(Value,DEG_RAD,user2):
             user2="pi"
             calculations(Value,DEG_RAD,user2)
             break
-        elif user2=="back":
-            scientific_mode()
+        elif user2 in ("back","return","leave"):
+            scientific()
             break
-        elif user2=="stop":
-            exit()
+        elif user2 in ("stop","exit","end"):
+            hf.return_main_menu()
         else:
-            user2=input("The entry is invalid please try again: ")
+            user2=input(f"{colors['bright_red']}\nThe entry is invalid {colors['cyan']}please try again: {colors['reset']}")
             
             
 def DEG_RAD1(Value,DEG_RAD,user2):
@@ -517,22 +517,24 @@ def DEG_RAD1(Value,DEG_RAD,user2):
         
     else:
         
-        DEG_RAD=input("\n\n\n(Enter 1 to degrees or 2 to radians) or stop or back: ")
+        DEG_RAD=input(f"{colors['cyan']}\nEnter {colors['bright_yellow']}1 to degrees or 2 to radians{colors['cyan']} or "
+                      f"({colors['bright_yellow']}'stop'{colors['cyan']} or {colors['bright_yellow']}back{colors['cyan']}): {colors['reset']}")
         
         while True:
             if DEG_RAD=="1":
                DEG_RAD="degrees"
             elif DEG_RAD=="2":
                DEG_RAD="radians"
-            if DEG_RAD == "degrees" or DEG_RAD=="radians" or DEG_RAD=="stop" or DEG_RAD=="back":
+            if DEG_RAD == "degrees" or DEG_RAD=="radians" \
+            or DEG_RAD=="stop" or DEG_RAD in ("back","return","leave"):
 
                break
             else:
-                DEG_RAD=input("invild please choce the number of degrees or radians: or stop or back: ")
-    if DEG_RAD=="stop":
-        exit()
+                DEG_RAD=input(f"{colors['bright_red']}Invild.. {colors['cyan']}please select 1 for degrees and 2 for radians or (stop or back): {colors['reset']}")
+    if DEG_RAD in ("stop","exit","end"):
+        hf.return_main_menu()
           
-    elif DEG_RAD=="back":
+    elif DEG_RAD in ("back","return","leave"):
         if user2=="sin"or user2=="cos" or user2=="tan" or user2=="csc" or user2=="sec"or user2=="cot":
             trifunction(Value,DEG_RAD,user2)
         elif user2=="arcsin" or user2=="arccos" or user2=="arctan" or user2 == "arccsc" or user2 =="arcsec":
@@ -545,31 +547,28 @@ def DEG_RAD1(Value,DEG_RAD,user2):
 def Value1(Value,DEG_RAD,user2):
 
     while True:
-        Value = input("\n\n\nEnter value or stop or back: ")
+        Value = input(f"{colors['cyan']}\nEnter value or "
+                      f"({colors['bright_yellow']}'stop'{colors['cyan']} or {colors['bright_yellow']}back{colors['cyan']}): {colors['reset']}")
 
-        if Value == "stop":
-            exit()
+        if Value in ("stop","exit","end"):
+            hf.return_main_menu()
     
             
-        elif Value=="back" and (user2 =="sinh" or user2=="cosh" or user2=="tanh" or user2=="csch" or user2=="sech" or user2=="coth"):
+        elif Value in ("back","return","leave") and (user2 in ("sinh", "cosh", "tanh", "csch", "sech","coth")):
             hypfunction(Value,DEG_RAD,user2)
-        elif Value=="back" and (user2=="log10" or user2=="ln"):
+        elif Value in ("back","return","leave") and (user2=="log10" or user2=="ln"):
             logfunction(Value,DEG_RAD,user2)
-        elif Value=="back" and (user2=="factorial" or user2=="exp"):
+        elif Value in ("back","return","leave") and (user2=="factorial" or user2=="exp"):
             otherfunction(Value,DEG_RAD,user2)
-        elif Value == "back":
+        elif Value in ("back","return","leave"):
             DEG_RAD1(Value, DEG_RAD, user2)
         else:
             try:
                 Value = float(Value)
                 calculations(Value, DEG_RAD, user2)
-                exit()
+                hf.return_main_menu()
             
             except ValueError:
-                print("Invalid number please enter again")
+                print(f"{colors['bright_red']}Invalid number please enter again{colors['reset']}")
 
-        
 
-scientific_mode()        
-    
-        
