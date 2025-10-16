@@ -53,15 +53,18 @@ Developed as a small group project by **Team A**.
 **By:** Salim  
 
 ### Error Handling
-1.  
-2.  
-3.  
-4.  
-5.  
+1.  Avoided dividing by zero in functions like csc and cot, because that causes an instant math error.
+2.  Blocked invalid values in inverse functions like arcsin and arccos, keeping inputs only between -1 and 1.
+3.  Used try/except to stop the program from crashing when the user types text instead of a number.
+4.  Added “back” and “stop” options so the user won’t get stuck in a loop or need to restart the program.
+5.  Prevented ln(0) and ln of negative numbers, since they are not defined in real math. 
 
 ### Difficulties Faced
--  
--  
+-  Connecting all parts together, so every function works smoothly inside the main system.
+-  Keeping accuracy and simplicity, making sure the results are correct.
+-  Controlling the user flow so after an error the program goes back to the right step.
+-  Avoiding infinite loops when users type “back” or wrong inputs many times.
+-  I made the code based on the idea that the user would enter text, but later the team decided to use numbers instead. So I faced difficulty changing the code to work with    numeric inputs.
 
 ---
 
