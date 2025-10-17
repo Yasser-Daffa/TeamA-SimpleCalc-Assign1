@@ -170,7 +170,7 @@ def bitwise_operations():
                 elif num2 in ("stop", "end", "exit"):
                     hf.return_main_menu()
 
-            num2 = int(num2)
+                    num2 = int(num2)
 
             if operator == "1": 
                 result = num1 & num2
