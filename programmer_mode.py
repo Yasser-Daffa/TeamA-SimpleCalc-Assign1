@@ -98,7 +98,9 @@ def convert_base():
 
                 try:
                     choice_num = int(eval(choice_num))
-                    base_transformation = {1: 2, 2: 8, 3: 16}
+                    base_transformation = {1: 2,
+                                           2: 8,
+                                           3: 16}
                     base = base_transformation.get(choice_num)
                     if not base:
                         raise ValueError
@@ -148,7 +150,7 @@ def bitwise_operations():
             hf.return_main_menu()
 
         if operator not in ("1","2","3","4","5","6"):
-            print(colors['bright_red'] + "\nError: Invalid operation! Choose 1–6." + colors['reset'])
+            print(colors['bright_red'] + "\nError: Invalid operation! Choose 1-6." + colors['reset'])
             continue
 
         while True:
@@ -169,7 +171,7 @@ def bitwise_operations():
                     continue
                 elif num2 in ("stop", "end", "exit"):
                     hf.return_main_menu()
-
+                    
                     num2 = int(num2)
 
             if operator == "1": 
