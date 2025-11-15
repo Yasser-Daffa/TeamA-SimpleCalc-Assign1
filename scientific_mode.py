@@ -314,12 +314,9 @@ def scientific():
           elif user2=="5":
               otherfunction(Value,DEG_RAD,user2)
               break
-          elif user2 in ("exit","stop","end"):
+          elif user2 in ("exit","stop","end","back","return","leave"):
               print(colors['bright_yellow'] + colors['bold'] + "\n**Exiting Scientific Mode... Goodbye!**\n" + colors['reset'])
               hf.return_main_menu()
-          elif user2 in ("back","return","leave"):
-              print("")
-              break
           else:
               user2=input(f"{colors['bright_red']}invild name.. {colors['cyan']}please Enter the function or stop: {colors['reset']}")
       
