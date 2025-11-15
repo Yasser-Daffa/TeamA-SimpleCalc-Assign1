@@ -1,0 +1,20 @@
+Post Submission patch notes 2025-10-17:
+
+1- Fixed Issue with programmer mode choice 2 (bitwise); option 6 (NOT) small indentation error resulted in a crash.
+
+2- Fixed standard mode printing "Exiting" twice when typing 'stop'
+
+3- Fixed Scientific mode menu, typing 'back' doesn't return you to the Main Menu
+
+
+Known issues:
+
+- Main Menu only exits when typing ('back', 'return', 'leave') and not when typing ('exit', 'stop', 'end')
+
+
+Planned Improvements:
+
+- Clarifying which mode you are exiting when typing ('exit', 'stop', 'end'). by printing: "Exiting {category} Mode.. Goodbye"
+
+- Make it so when typing ('back', 'return') in Main Menu, returns you to the mode you were previously in,
+  instead of exiting the program.
