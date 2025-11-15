@@ -31,7 +31,7 @@ def all_modes_menu():
 
         if user_choice in ("stop","end","exit","leave","return","back"):
             exit()
-
+    
         selected_mode = modes_dict[modes_list[int(user_choice) - 1]]
         
         selected_mode()
