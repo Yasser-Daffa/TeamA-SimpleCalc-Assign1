@@ -9,6 +9,7 @@ def colors_function():
         colors = get_colors()
         print(colors['red'] + "This is red text" + colors['reset'])
     """
+    
     colors = {
         "reset": "\033[0m",
         "bold": "\033[1m",
@@ -34,7 +35,7 @@ def colors_function():
 colors = colors_function()
 
 def valid_input_function(prompt_message, allow_float=False, allow_negative=True):
-    """
+    '''
     This function keeps prompting the user continously 
     until they enter a valid number or 'exit/back/stop' to exit.
     it only works with (int) until the coder makes allow_float=True.. then it allows float numbers!
@@ -47,7 +48,7 @@ def valid_input_function(prompt_message, allow_float=False, allow_negative=True)
     returns:
         - int or float (depending on allow_float)
         - "exit" if user typed exit/back/stop
-    """
+    '''
     colors = colors_function()
     while True:
         user_input = input(prompt_message)
@@ -181,3 +182,5 @@ def return_main_menu():
     from main_menu import all_modes_menu
     all_modes_menu()
     return
+
+
