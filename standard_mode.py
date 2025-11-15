@@ -32,7 +32,6 @@ def roots_function():
         print()
 
         if user_roots == "back":
-            print(colors["bright_yellow"]+colors["bold"]+"**Exiting Roots mode**" + colors['reset'])
             break
         
         if user_roots < 1:
@@ -41,7 +40,6 @@ def roots_function():
 
         user_value = hf.valid_input_function(f"{colors['blue']}Enter value under the root: {colors['reset']}", True)
         if user_value == "back":
-            print(colors["bright_yellow"]+colors["bold"]+"\n**Exiting Roots mode**" + colors['reset'])
             break
         
         if int(user_value) <= 0:
@@ -64,12 +62,10 @@ def power_function():
     while True:
         user_value = hf.valid_input_function(f"{colors['blue']}Enter the base number ({colors['yellow']}'back'{colors['blue']} to return): {colors['reset']}", allow_float=True)
         if user_value == "back":
-            print(colors["bright_yellow"] + colors["bold"] + "\n**Exiting Power mode**" + colors['reset'])
             break
         
         user_power = hf.valid_input_function(f"{colors['cyan']}Enter the exponent (integer >= 0): {colors['reset']}")
         if user_power == "back":
-            print(colors["bright_yellow"] + colors["bold"] + "\n**Exiting Power mode**" + colors['reset'])
             break
         
         if user_power < 0 or not float(user_power).is_integer():
@@ -89,7 +85,6 @@ def reciprocal_function():
     while True:
         number = hf.valid_input_function(f"{colors['blue']}Enter the number (or {colors['yellow']}'back'{colors['blue']} to return): {colors['reset']}", allow_float=True)
         if number == "back":
-            print(colors["bright_yellow"] + colors["bold"] + "\n**Exiting Reciprocal mode**" + colors['reset'])
             break
 
         if number == 0:
