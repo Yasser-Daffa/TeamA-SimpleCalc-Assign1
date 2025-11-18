@@ -4,6 +4,12 @@ A simple multi-mode calculator with four functions:
 **Standard**, **Programmer**, **Scientific**, and **Converter** modes.  
 Developed as a small group project by **Team A**.
 
+# Installation:
+- Download the zip file "ExcutableSimpleCalc.zip"
+- Unzip it
+- run the main_menu.exe file inside the folder
+- That's it! no need to install or do anything extra
+  
 # Navigation:
 
 - 1, 2, 3, ... n: Choose what you want to do in the menu.
